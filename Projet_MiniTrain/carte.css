@@ -1,0 +1,16 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 175px;
+}
+
+.terrain {
+	background-color: #fdf4e5;
+}
+
+.maison-bleue {
+	position: absolute;
+	left: 200px;
+
+}
