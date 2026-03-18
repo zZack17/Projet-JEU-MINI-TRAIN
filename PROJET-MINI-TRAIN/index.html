@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniTrain</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Mini<span>Train</span></div>
+  <div id="hud">
+    <div class="hud-item">
+      <div class="hud-label">Temps</div>
+      <div class="hud-value" id="hud-timer">1:00</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">Score</div>
+      <div class="hud-value" id="hud-score">0</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">Livrés</div>
+      <div class="hud-value" id="hud-done">0</div>
+    </div>
+  </div>
+</header>
+
+<div id="main">
+
+  <!-- MENU -->
+  <div id="menu-screen" class="screen active">
+    <div class="menu-title">MINITRAIN</div>
+    <div class="menu-subtitle">Acheminez chaque train vers sa gare</div>
+    <div class="difficulty-grid">
+      <button class="diff-btn selected" data-diff="easy">
+        <span class="diff-name">Facile</span>
+        <span class="diff-info">2 couleurs<br>2 jonctions<br>Lent</span>
+      </button>
+      <button class="diff-btn" data-diff="medium">
+        <span class="diff-name">Normal</span>
+        <span class="diff-info">3 couleurs<br>3 jonctions<br>Moyen</span>
+      </button>
+      <button class="diff-btn" data-diff="hard">
+        <span class="diff-name">Difficile</span>
+        <span class="diff-info">4 couleurs<br>4 jonctions<br>Rapide</span>
+      </button>
+    </div>
+    <button class="btn-start" id="btn-start">DÉMARRER</button>
+  </div>
+
+  <!-- GAME -->
+  <div id="game-screen" class="screen">
+    <div id="canvas-container">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="hint">Cliquez sur une jonction (cercle) pour changer la direction des rails</div>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="over-screen" class="screen">
+    <div class="over-title">PARTIE TERMINÉE</div>
+    <div class="over-score">SCORE FINAL</div>
+    <div class="over-score-value" id="final-score">0</div>
+    <div class="over-detail" id="final-detail"></div>
+    <div class="btn-group">
+      <button class="btn-sec" id="btn-retry">Rejouer</button>
+      <button class="btn-sec" id="btn-menu">Menu</button>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
